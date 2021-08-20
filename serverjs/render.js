@@ -19,6 +19,7 @@ const render = (req, res, page, reactProps = {}, options = {}) => {
 
   res.render('main', {
     reactProps: serialize(reactProps),
+    node_env: process.env.NODE_ENV,
     page,
     metadata: options.metadata,
     title: options.title ? `${options.title} - Solely Singleton` : 'Solely Singleton',
