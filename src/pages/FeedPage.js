@@ -15,7 +15,7 @@ const FeedPage = ({ podcasts }) => {
         pageSize={20}
         showBottom
         rows={podcasts.master.episodes.map((podcast) => (
-          <div className="pb-2">
+          <div key={`podcast-${podcast.guid}`} className="pb-2">
             <EpisodePreview key={podcast.guid} episode={podcast} />
           </div>
         ))}

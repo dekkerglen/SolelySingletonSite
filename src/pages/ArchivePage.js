@@ -13,18 +13,16 @@ const ArchivePage = ({ podcasts }) => {
     .reverse()
     .filter((value, index, self) => self.indexOf(value) === index);
 
-  console.log(seasons);
-
   return (
     <MainLayout>
       <h3 className="pt-3 pb-2 centered">Episode Archive</h3>
       {seasons.map((season) => (
-        <Accordion title={`Season ${season}`}>
+        <Accordion key={`season-${season}`} title={`Season ${season}`}>
           {podcasts.master.episodes
             .filter((item) => item.season === season)
             .reverse()
             .map((podcast) => (
-              <div className="pb-2">
+              <div key={`podcast-${podcast.guid}`} className="pb-2">
                 <EpisodePreview key={podcast.guid} episode={podcast} />
               </div>
             ))}

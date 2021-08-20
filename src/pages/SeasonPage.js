@@ -21,7 +21,7 @@ const SeasonPage = ({ episodes, season }) => {
         pageSize={20}
         showBottom
         rows={episodes.map((podcast) => (
-          <div className="pb-2">
+          <div key={`podcast-${podcast.guid}`} className="pb-2">
             <EpisodePreview key={podcast.guid} episode={podcast} />
           </div>
         ))}

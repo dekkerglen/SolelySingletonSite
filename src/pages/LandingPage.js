@@ -9,7 +9,6 @@ import EpisodePropType from 'proptypes/EpisodePropType';
 import { Row, Col } from 'reactstrap';
 
 const LandingPage = ({ episodes }) => {
-  console.log(episodes);
   return (
     <MainLayout>
       <h2 className="pt-4 centered">Solely Singleton — A Magic: the Gathering Podcast</h2>
@@ -41,7 +40,7 @@ const LandingPage = ({ episodes }) => {
       <hr />
       <h3 className="centered">Latest Episodes</h3>
       {episodes.map((podcast) => (
-        <div className="pb-2">
+        <div key={`podcast-${podcast.guid}`} className="pb-2">
           <EpisodePreview key={podcast.guid} episode={podcast} />
         </div>
       ))}
