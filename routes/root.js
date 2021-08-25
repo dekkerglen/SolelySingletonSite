@@ -98,7 +98,7 @@ router.get('/tos', (req, res) => {
     content: [
       {
         label: 'Introduction',
-        text: `These Website Standard Terms and Conditions written on this webpage shall manage your use of our website, Solely Singleton accessible at cubecobra.com. These Terms will be applied fully and affect to your use of this Website. By using this Website, you agreed to accept all terms and conditions written in here. You must not use this Website if you disagree with any of these Website Standard Terms and Conditions. These Terms and Conditions have been generated with the help of the Terms And Conditions Template. People below 18 years old are not allowed to use this Website. All users who are minors must have the permission of, and be directly supervised by, their parent or guardian to use this site. If you are a minor, you must have your parent or guardian read and agree to these Terms of Use prior to you using this site.`,
+        text: `These Website Standard Terms and Conditions written on this webpage shall manage your use of our website, Solely Singleton accessible at solelysingleton.com. These Terms will be applied fully and affect to your use of this Website. By using this Website, you agreed to accept all terms and conditions written in here. You must not use this Website if you disagree with any of these Website Standard Terms and Conditions. These Terms and Conditions have been generated with the help of the Terms And Conditions Template. People below 18 years old are not allowed to use this Website. All users who are minors must have the permission of, and be directly supervised by, their parent or guardian to use this site. If you are a minor, you must have your parent or guardian read and agree to these Terms of Use prior to you using this site.`,
       },
       {
         label: 'Intellectual Property Rights',
@@ -143,7 +143,7 @@ router.get('/tos', (req, res) => {
       },
       {
         label: 'Your Privacy',
-        text: `Please read the Privacy Policy: cubecobra.com/privacy`,
+        text: `Please read the Privacy Policy: solelysingleton.com/privacy`,
       },
       {
         label: 'No warranties',
@@ -196,11 +196,11 @@ router.get('/privacy', (req, res) => {
       },
       {
         label: '',
-        text: 'Solely Singleton ("us", "we", or "our") operates the cubecobra.com website (the "Service").',
+        text: 'Solely Singleton ("us", "we", or "our") operates the solelysingleton.com website (the "Service").',
       },
       {
         label: '',
-        text: 'This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data. Our Privacy Policy for Solely Singleton is created with the help of the Free Privacy Policy Generator. We use your data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, accessible from cubecobra.com/tos',
+        text: 'This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data. Our Privacy Policy for Solely Singleton is created with the help of the Free Privacy Policy Generator. We use your data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, accessible from solelysingleton.com/tos',
       },
       {
         label: 'Information Collection And Use',
