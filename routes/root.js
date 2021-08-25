@@ -79,7 +79,7 @@ router.post('/contact', (req, res) => {
     from: email,
     to,
     subject: `${name} - ${subject}`,
-    text: message,
+    text: `From: ${email}\n\nMessage:\n${message}`,
   };
 
   transporter.sendMail(mailOptions, (error) => {
