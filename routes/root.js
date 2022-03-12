@@ -82,7 +82,7 @@ router.post('/contact', (req, res) => {
     text: `From: ${email}\n\nMessage:\n${message}`,
   };
 
-  transporter.sendMail(mailOptions, (error) => {
+  return transporter.sendMail(mailOptions, (error) => {
     if (error) {
       // eslint-disable-next-line no-console
       console.error(error);

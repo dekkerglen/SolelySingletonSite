@@ -17,22 +17,24 @@ const fetchPodcasts = async () => {
       podcasts[feed.name].data = await getFeedData(feed.url);
       podcasts[feed.name].episodes = [];
     }
-    podcasts[feed.name].episodes = (await getFeedEpisodes(feed.url)).map((episode) => {
-      const podcastEpisode = {};
+    podcasts[feed.name].episodes = (await getFeedEpisodes(feed.url))
+      .filter((episode) => !episode.description.toLowerCase().includes('poorhammer'))
+      .map((episode) => {
+        const podcastEpisode = {};
 
-      podcastEpisode.title = episode.title;
-      podcastEpisode.description = episode.description;
-      podcastEpisode.guid = episode.guid;
-      podcastEpisode.link = episode.link;
-      podcastEpisode.source = episode.source;
-      podcastEpisode.season = episode.season || '1';
-      podcastEpisode.date = new Date(episode.date);
+        podcastEpisode.title = episode.title;
+        podcastEpisode.description = episode.description;
+        podcastEpisode.guid = episode.guid;
+        podcastEpisode.link = episode.link;
+        podcastEpisode.source = episode.source;
+        podcastEpisode.season = episode.season || '1';
+        podcastEpisode.date = new Date(episode.date);
 
-      podcastEpisode.image = podcasts[feed.name].data.image;
-      podcastEpisode.podcastname = podcasts[feed.name].data.title;
+        podcastEpisode.image = podcasts[feed.name].data.image;
+        podcastEpisode.podcastname = podcasts[feed.name].data.title;
 
-      return podcastEpisode;
-    });
+        return podcastEpisode;
+      });
   }
 };
 

@@ -35,7 +35,9 @@ const AboutPage = () => {
       <hr />
       <Row className="pt-4">
         <Col md={8} sm={12}>
-          <h4>Poorhammer</h4>
+          <h4>
+            <a href="https://poorhammer.com">Poorhammer</a>
+          </h4>
           <p>
             The Poorhammer Podcast covers a variety of content for Warhammer games and the surrounding hobbies, covering
             a variety of content from in-game strategy to army building to collecting and painting new armies. Our goal
@@ -43,7 +45,9 @@ const AboutPage = () => {
           </p>
         </Col>
         <Col md={4} sm={12}>
-          <img className="w-100" src="/content/poorhammer-thumbnail.png" alt="PoorHammer Logo" />
+          <a href="https://poorhammer.com">
+            <img className="w-100" src="/content/poorhammer-thumbnail.png" alt="PoorHammer Logo" />
+          </a>
         </Col>
       </Row>
       <hr />
