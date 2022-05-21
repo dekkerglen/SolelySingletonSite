@@ -31,9 +31,10 @@ router.get('/about', (req, res) => {
   return render(req, res, 'AboutPage');
 });
 
-router.get('/feed', (req, res) => {
+router.get('/feed/:id', (req, res) => {
   return render(req, res, 'FeedPage', {
     podcasts: getPodcasts(),
+    feed: req.params.id,
   });
 });
 

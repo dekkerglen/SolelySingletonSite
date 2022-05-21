@@ -6,15 +6,18 @@ import RenderToRoot from 'utils/RenderToRoot';
 import EpisodePreview from 'components/EpisodePreview';
 import EpisodePropType from 'proptypes/EpisodePropType';
 import PagedList from 'components/PagedList';
+import PoorHammerBio from 'content/PoorhammerBio';
+import SolelySingletonBio from 'content/SolelySingletonBio';
 
-const FeedPage = ({ podcasts }) => {
+const FeedPage = ({ podcasts, feed }) => {
   return (
     <MainLayout>
-      <h3 className="pt-3 centered">Podcast Feed</h3>
+      {feed === 'solelysingleton' && <SolelySingletonBio />}
+      {feed === 'poorhammer' && <PoorHammerBio />}
       <PagedList
         pageSize={20}
         showBottom
-        rows={podcasts.master.episodes.map((podcast) => (
+        rows={podcasts[feed].episodes.map((podcast) => (
           <div key={`podcast-${podcast.guid}`} className="pb-2">
             <EpisodePreview key={podcast.guid} episode={podcast} />
           </div>
@@ -29,7 +32,14 @@ FeedPage.propTypes = {
     master: PropTypes.shape({
       episodes: PropTypes.arrayOf(EpisodePropType),
     }),
+    poorhammer: PropTypes.shape({
+      episodes: PropTypes.arrayOf(EpisodePropType),
+    }),
+    solelysingleton: PropTypes.shape({
+      episodes: PropTypes.arrayOf(EpisodePropType),
+    }),
   }).isRequired,
+  feed: PropTypes.string.isRequired,
 };
 
 export default RenderToRoot(FeedPage);

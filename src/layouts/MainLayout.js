@@ -30,10 +30,10 @@ const MainLayout = ({ children }) => {
                 <NavLink href="/">Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/feed">Podcast Feed</NavLink>
+                <NavLink href="/feed/solelysingleton">Solely Singleton</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/archive">Episode Archive</NavLink>
+                <NavLink href="/feed/poorhammer">Poorhammer</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/about">About</NavLink>
