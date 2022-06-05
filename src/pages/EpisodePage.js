@@ -13,9 +13,11 @@ const EpisodePage = ({ episode }) => {
     <MainLayout>
       <h5 className="pt-2">
         <Breadcrumb>
-          <BreadcrumbItem>
-            <a href={`/season/${episode.season}`}>{`Season ${episode.season}`}</a>
-          </BreadcrumbItem>
+          {episode.season && (
+            <BreadcrumbItem>
+              <a href={`/season/${episode.season}`}>{`Season ${episode.season}`}</a>
+            </BreadcrumbItem>
+          )}
           <BreadcrumbItem active>{episode.title}</BreadcrumbItem>
         </Breadcrumb>
       </h5>

@@ -45,8 +45,12 @@ router.get('/archive', (req, res) => {
 });
 
 router.get('/episode/:guid', (req, res) => {
+  const allPodcasts = Object.entries(getPodcasts())
+    .map((entry) => entry[1].episodes)
+    .flat();
+
   return render(req, res, 'EpisodePage', {
-    episode: getPodcasts().master.episodes.filter((episode) => episode.guid === req.params.guid)[0],
+    episode: allPodcasts.filter((episode) => episode.guid === req.params.guid)[0],
   });
 });
 
